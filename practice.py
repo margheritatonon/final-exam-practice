@@ -19,8 +19,11 @@ class ListCalculator:
         self.y = y
     
     def division(self):
+        assert sum(self.x) != 0, "A division by 0 cannot occur."
         result = sum(self.y) / sum(self.x)
         return result
 
 lists1 = ListCalculator([10, 20, 30], [5, 10, 15])
 print(lists1.division())
+lists2 = ListCalculator([5,-4,-1], [3,5,7])
+print(lists2.division())
