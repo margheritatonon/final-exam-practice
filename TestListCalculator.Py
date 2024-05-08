@@ -13,5 +13,10 @@ class TestListCalculator(unittest.TestCase):
         result = lists.division()
         expected = 6
         self.assertEqual(result, expected)
+    
+    def test_three(self):
+        lists = ListCalculator([5,-4,-1], [3,5,7])
+        result = lists.division()
+
 
 unittest.main(argv=[''], verbosity=2, exit=False)
