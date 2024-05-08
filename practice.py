@@ -19,9 +19,13 @@ class ListCalculator:
         self.y = y
     
     def division(self):
-        assert sum(self.x) != 0, "A division by 0 cannot occur."
-        result = sum(self.y) / sum(self.x)
-        return result
+        try:
+            result = sum(self.y) / sum(self.x)
+            return result
+        except ZeroDivisionError:
+            print("Infinite!")
+        except:
+            print("Something else went wrong")
 
 lists1 = ListCalculator([10, 20, 30], [5, 10, 15])
 print(lists1.division())
